@@ -25,9 +25,7 @@ minus.addEventListener("click", () => {
 
 });
 
-/* =========================
-   CART
-========================= */
+
 
 cartIcon.addEventListener("click", () => {
   cartBox.style.display =
@@ -91,9 +89,7 @@ addCart.addEventListener("click", () => {
 
 });
 
-/* =========================
-   GALLERY
-========================= */
+
 
 const thumbs = document.querySelectorAll(".thumb");
 const mainImage = document.getElementById("mainImage");
@@ -114,28 +110,17 @@ thumbs.forEach((thumb) => {
 
 });
 
-/* =========================
-   LIGHTBOX
-========================= */
 
-const lightbox =
-  document.querySelector(".lightbox");
 
-const lightboxMain =
-  document.querySelector(".lightbox-main");
+const lightbox = document.querySelector(".lightbox");
 
-const closeBtn =
-  document.querySelector(".close");
+const lightboxMain = document.querySelector(".lightbox-main");
 
-const lightThumbs =
-  document.querySelectorAll(".light-thumb");
+const closeBtn = document.querySelector(".close");
 
-const images = [
-  "./images/image-product-1.jpg",
-  "./images/image-product-2.jpg",
-  "./images/image-product-3.jpg",
-  "./images/image-product-4.jpg"
-];
+const lightThumbs = document.querySelectorAll(".light-thumb");
+
+const images = ["./images/image-product-1.jpg","./images/image-product-2.jpg","./images/image-product-3.jpg","./images/image-product-4.jpg"];
 
 let current = 0;
 
@@ -159,7 +144,8 @@ function updateLightbox() {
 
     thumb.classList.remove("active");
 
-    if (index === current) {
+    if (index === current) 
+    {
       thumb.classList.add("active");
     }
 
@@ -167,9 +153,7 @@ function updateLightbox() {
 
 }
 
-document
-  .querySelector(".next")
-  .addEventListener("click", () => {
+document.querySelector(".next").addEventListener("click", () => {
 
     current++;
 
@@ -181,13 +165,12 @@ document
 
   });
 
-document
-  .querySelector(".prev")
-  .addEventListener("click", () => {
+document.querySelector(".prev").addEventListener("click", () => {
 
     current--;
 
-    if (current < 0) {
+    if (current < 0)
+    {
       current = images.length - 1;
     }
 
