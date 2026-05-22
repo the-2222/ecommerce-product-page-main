@@ -1,0 +1,432 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8f8f8;
+  color: #1d1d1d;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: orange;
+  transition: 0.3s;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: black;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: orange;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: none;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.avatar:hover {
+  border: 2px solid orange;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-box {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 360px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: none;
+  z-index: 100;
+}
+
+.cart-header {
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cart-content {
+  padding: 25px;
+  min-height: 180px;
+}
+
+.empty {
+  color: gray;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  width: 60px;
+  border-radius: 8px;
+}
+
+.cart-info {
+  flex: 1;
+  color: gray;
+  line-height: 1.6;
+}
+
+.cart-info strong {
+  color: black;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.checkout {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  background: orange;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout:hover {
+  background: #ff9100;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  padding: 80px 0;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  width: 50%;
+}
+
+.main-image {
+  cursor: pointer;
+}
+
+.main-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.thumbnails img {
+  width: 100px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.thumbnails img:hover {
+  opacity: 0.6;
+}
+
+.thumbnails img.active {
+  border: 3px solid orange;
+  opacity: 0.5;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  width: 50%;
+}
+
+.company {
+  color: gray;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+.description {
+  color: gray;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.discount {
+  background: #1d1d1d;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.old-price {
+  color: gray;
+  text-decoration: line-through;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.quantity button {
+  border: none;
+  background: none;
+  font-size: 28px;
+  color: orange;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quantity button:hover {
+  opacity: 0.6;
+}
+
+.add-cart {
+  flex: 1;
+  border: none;
+  background: orange;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-cart:hover {
+  background: #ff9100;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox-content {
+  width: 500px;
+  position: relative;
+}
+
+.lightbox-main {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: orange;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 40%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.prev {
+  left: -30px;
+}
+
+.next {
+  right: -30px;
+}
+
+.lightbox-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.lightbox-thumbs img {
+  width: 90px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+.lightbox-thumbs img.active {
+  border-color: orange;
+  opacity: 0.5;
+}
+	
+	
+	
+	
+	.attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

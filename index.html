@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+<div class="container">
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img src="./images/logo.svg" alt="sneakers">
+
+      <ul class="menu">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+    </div>
+
+    <div class="nav-right">
+
+      <div class="cart-icon">
+
+        <img src="./images/icon-cart.svg" alt="">
+        <div class="cart-count">0</div>
+
+      </div>
+
+      <img
+        class="avatar"
+        src="./images/image-avatar.png"
+        alt="avatar"
+      />
+
+      <div class="cart-box">
+
+        <div class="cart-header">
+          Cart
+        </div>
+
+        <div class="cart-content">
+
+          <p class="empty">
+            Your cart is empty.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <section class="main">
+
+    <div class="gallery">
+
+      <div class="main-image">
+        <img
+          id="mainImage"
+          src="./images/image-product-1.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="thumbnails">
+
+        <img
+          class="thumb active"
+          src="./images/image-product-1-thumbnail.jpg"
+          data-full="./images/image-product-1.jpg"
+        />
+
+        <img
+          class="thumb"
+          src="./images/image-product-2-thumbnail.jpg"
+          data-full="./images/image-product-2.jpg"
+        />
+
+        <img
+          class="thumb"
+          src="./images/image-product-3-thumbnail.jpg"
+          data-full="./images/image-product-3.jpg"
+        />
+
+        <img
+          class="thumb"
+          src="./images/image-product-4-thumbnail.jpg"
+          data-full="./images/image-product-4.jpg"
+        />
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <p class="company">SNEAKER COMPANY</p>
+
+      <h1>
+        Fall Limited Edition Sneakers
+      </h1>
+
+      <p class="description">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they’ll withstand everything
+        the weather can offer.
+      </p>
+
+      <div class="price-box">
+        <div class="price">$125.00</div>
+        <div class="discount">50%</div>
+      </div>
+
+      <div class="old-price">$250.00</div>
+
+      <div class="buttons">
+
+        <div class="quantity">
+
+          <button id="minus">-</button>
+
+          <span id="quantity">0</span>
+
+          <button id="plus">+</button>
+
+        </div>
+
+        <button class="add-cart">
+          <img src="./images/icon-cart.svg" alt="">
+          Add to cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox">
+
+  <div class="lightbox-content">
+
+    <div class="close"><img src="./images/icon-close.svg" alt="X"></div>
+
+    <button class="prev"><img src="./images/icon-previous.svg" alt="<"></button>
+    <button class="next"><img src="./images/icon-next.svg" alt=">"></button>
+
+    <img
+      class="lightbox-main"
+      src="./images/image-product-1.jpg"
+    />
+
+    <div class="lightbox-thumbs">
+
+      <img
+        class="light-thumb active"
+        src="./images/image-product-1-thumbnail.jpg"
+        data-full="./images/image-product-1.jpg"
+      />
+
+      <img
+        class="light-thumb"
+        src="./images/image-product-2-thumbnail.jpg"
+        data-full="./images/image-product-2.jpg"
+      />
+
+      <img
+        class="light-thumb"
+        src="./images/image-product-3-thumbnail.jpg"
+        data-full="./images/image-product-3.jpg"
+      />
+
+      <img
+        class="light-thumb"
+        src="./images/image-product-4-thumbnail.jpg"
+        data-full="./images/image-product-4.jpg"
+      />
+
+    </div>
+
+  </div>
+
+</div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/the-2222">the-2222</a>.
+  </footer>
+  
+  <script src="script.js">
+  </script>
+  
+</body>
+</html>
