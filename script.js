@@ -11,6 +11,51 @@ const cartBox = document.querySelector(".cart-box");
 
 let amount = 0;
 
+const lightbox = document.querySelector(".lightbox");
+
+const lightboxMain = document.querySelector(".lightbox-main");
+
+const closeBtn = document.querySelector(".close");
+
+const lightThumbs = document.querySelectorAll(".light-thumb");
+
+const images = ["./images/image-product-1.jpg","./images/image-product-2.jpg","./images/image-product-3.jpg","./images/image-product-4.jpg"];
+
+let current = 0;
+
+function OpenMobile()
+{
+	document.getElementById("MobileMenu").style.visibility = "visible";
+}
+
+function CloseMobile()
+{
+	document.getElementById("MobileMenu").style.visibility = "collapse";
+}
+
+function MobN()
+{
+	  current++;
+
+    if (current >= images.length) {
+      current = 0;
+    }
+
+    updateLightbox();
+}
+
+function MobN()
+{
+	 current--;
+
+    if (current < 0)
+    {
+      current = images.length - 1;
+    }
+
+    updateLightbox();
+}
+
 plus.addEventListener("click", () => {
   amount++;
   quantity.textContent = amount;
@@ -112,18 +157,6 @@ thumbs.forEach((thumb) => {
 
 
 
-const lightbox = document.querySelector(".lightbox");
-
-const lightboxMain = document.querySelector(".lightbox-main");
-
-const closeBtn = document.querySelector(".close");
-
-const lightThumbs = document.querySelectorAll(".light-thumb");
-
-const images = ["./images/image-product-1.jpg","./images/image-product-2.jpg","./images/image-product-3.jpg","./images/image-product-4.jpg"];
-
-let current = 0;
-
 document
   .querySelector(".main-image")
   .addEventListener("click", () => {
@@ -139,7 +172,7 @@ closeBtn.addEventListener("click", () => {
 function updateLightbox() {
 
   lightboxMain.src = images[current];
-
+  document.getElementById("mainImage").src = images[current];
   lightThumbs.forEach((thumb, index) => {
 
     thumb.classList.remove("active");
@@ -177,6 +210,8 @@ document.querySelector(".prev").addEventListener("click", () => {
     updateLightbox();
 
   });
+  
+
 
 lightThumbs.forEach((thumb, index) => {
 

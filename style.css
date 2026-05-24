@@ -1,7 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
   font-family: "Kumbh Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -9,81 +8,76 @@
 }
 
 body {
-  background: #f8f8f8;
-  color: #1d1d1d;
-}
-
-.container {
-  width: 1200px;
-  margin: auto;
-  position: relative;
+	background: #f8f8f8;
+	color: #1d1d1d;
 }
 
 
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0;
-  border-bottom: 1px solid #ddd;
+nav 
+{
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: 1px solid #ddd;
 }
 
 .nav-left {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+	display: flex;
+	align-items: center;
+	gap: 50px;
 }
 
 .logo {
-  font-size: 32px;
-  font-weight: bold;
+	font-size: 32px;
+	font-weight: bold;
 }
 
 .menu {
-  display: flex;
-  gap: 30px;
-  list-style: none;
+	display: flex;
+	gap: 30px;
+	list-style: none;
 }
 
 .menu li {
-  position: relative;
-  padding-bottom: 40px;
+	position: relative;
+	padding-bottom: 40px;
 }
 
 .menu li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: hsl(26, 100%, 55%);
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 4px;
+	background: hsl(26, 100%, 55%);
 }
 
 .menu li:hover::after {
-  width: 100%;
+	width: 100%;
 }
 
 .menu li a {
-  text-decoration: none;
-  color: gray;
+	text-decoration: none;
+	color: gray;
 }
 
 .menu li a:hover {
-  color: black;
+	color: black;
 }
 
 .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  position: relative;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
 }
 
 .cart-icon {
-  cursor: pointer;
-  position: relative;
+	cursor: pointer;
+	position: relative;
 }
 
 .cart-count {
@@ -209,7 +203,6 @@ nav {
 
 .main-image img {
   width: 100%;
-  border-radius: 20px;
 }
 
 .thumbnails {
@@ -364,7 +357,9 @@ h1 {
 }
 
 .prev,
-.next 
+.next ,
+.MobPrev,
+.MobNext
 {
   position: absolute;
   top: 40%;
@@ -373,15 +368,42 @@ h1 {
   border-radius: 50%;
   border: none;
   background: white;
-  font-size: 28px;
   cursor: pointer;
 }
 
-.prev {
+.MobPrev,
+.MobNext
+{
+	visibility: collapse;
+	width: 30px;
+	height: 30px;
+}
+
+.MobPrev > img,
+.MobNext > img
+{
+	width: 30px;
+	height: 30px;
+}
+
+.MobPrev
+{
+	left: 30px;
+}
+
+.MobNext
+{
+	right: 30px;
+}
+
+.prev
+{
   left: -30px;
 }
 
-.next {
+.next
+
+ {
   right: -30px;
 }
 
@@ -437,10 +459,21 @@ h1 {
   visibility: collapse;
   border: 0px;
   background-color: none;
+  background-color:#f8f8f8;
 }
 
-@media screen and (width < 800px)
+.Ham-menu-Off
 {
+	border: 0px;
+	background-color: none;
+	background-color:#f8f8f8;
+}
+
+@media screen and (width < 1000px)
+{
+	
+	
+	
   .menu
   {
     visibility: collapse;
@@ -451,6 +484,46 @@ h1 {
     visibility: visible;
     margin: 20px;
   }
+  
+  .nav
+	{
+		width: 400px;
+	}
+	
+	.main
+	{
+		flex-direction: column;
+	}
+	
+	.thumbnails
+	{
+		visibility: collapse;
+	}
+	
+	.cart-box
+	{
+		left: calc(50% - 180px);
+	}
+	
+	.main-image
+	{
+		width: clac(150% + 120px);
+	}
+	
+	.main
+	{
+		padding: 10px 0;
+	}
+	.content 
+	{
+		width: 90%;
+	}
+	
+	.MobPrev,
+	.MobNext
+	{
+		visibility: visible;
+	}
 }
 
 

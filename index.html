@@ -18,9 +18,9 @@
 
 </head>
 <body>
-<div class="Ham-Men-BL">
+<div class="Ham-Men-BL" id="MobileMenu">
   <div class="Ham-Men-Vis">
-    <button class="Ham-menu-Off"><img src="./images/icon-close.svg"></button>
+    <button class="Ham-menu-Off" onclick="CloseMobile()"><img src="./images/icon-close.svg"></button>
     <li><a>Collections</a></li>
     <li><a>Men</a></li>
     <li><a>Women</a></li>
@@ -36,9 +36,9 @@
 
 
     <div class="nav-left">
-      <button class="Ham-menu"><img src="./images/icon-menu.svg"></button>
+      <button class="Ham-menu" onclick="OpenMobile()"><img src="./images/icon-menu.svg"></button>
       <img src="./images/logo.svg" alt="sneakers">
-
+	
       <ul class="menu">
         <li><a>Collections</a></li>
         <li><a>Men</a></li>
@@ -57,24 +57,16 @@
         <div class="cart-count">0</div>
 
       </div>
-
-      <img
-        class="avatar"
-        src="./images/image-avatar.png"
-        alt="avatar"
-      />
+ 
+      <img class="avatar"src="./images/image-avatar.png" alt="avatar">
 
       <div class="cart-box">
 
-        <div class="cart-header">
-          Cart
-        </div>
+        <div class="cart-header">Cart</div>
 
         <div class="cart-content">
 
-          <p class="empty">
-            Your cart is empty.
-          </p>
+          <p class="empty">Your cart is empty.</p>
 
         </div>
 
@@ -89,11 +81,9 @@
     <div class="gallery">
 
       <div class="main-image">
-        <img
-          id="mainImage"
-          src="./images/image-product-1.jpg"
-          alt="buty"
-        />
+        <img id="mainImage" src="./images/image-product-1.jpg" alt="buty">
+			<button class="MobPrev" onclick="MobN()"><img src="./images/icon-previous.svg" alt="<"></button>
+			<button class="MobNext" onclick="MobP()"><img src="./images/icon-next.svg" alt=">"></button>
       </div>
 
       <div class="thumbnails">
